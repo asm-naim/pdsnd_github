@@ -14,12 +14,25 @@ see_raw_data_lists = ["yes", "no"]
 
 #helper function
 def options(array):
+    """
+    A reusable function that can be used to return multiple options in a clean way
+
+    Returns:
+        (str) options for question from the array
+
+    """
     title_array = [x.title() for x in array]
     options = "\n\t".join(title_array)
     return "\n\t" + options
 
 #helper function
 def error_text(filter, questionfilter):
+    """
+    A reusable function that can be used handle validation while key answer a question
+
+    Returns:
+        (str) error message and input
+    """
     return input("\nOpps! You have enter the wrong option, please try again and select from the given {} options.{}".format(filter, questionfilter)).lower()
 
 def get_filters():
