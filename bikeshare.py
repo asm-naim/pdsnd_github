@@ -35,6 +35,16 @@ def error_text(filter, questionfilter):
     """
     return input("\nOpps! You have enter the wrong option, please try again and select from the given {} options.{}".format(filter, questionfilter)).lower()
 
+#helper function
+def time_to_finish(start_time) : 
+    """
+    A reusable function that can be to print time for the function to be executed"
+
+    Returns:
+    """
+    print("\nThis took %s seconds." % (time.time() - start_time))
+    print('-'*40)
+
 def get_filters():
     """
     Asks user to specify a city, month, and day to analyze.
@@ -140,8 +150,7 @@ def time_stats(df):
     most_common_start_hour = df['hour'].mode()[0]
     print("The most common start hour: \n", most_common_start_hour)
 
-    print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*40)
+    time_to_finish(start_time)
 
 def station_stats(df):
     """Displays statistics on the most popular stations and trip.
@@ -168,8 +177,7 @@ def station_stats(df):
     most_frequent_combined_station = combined_station.mode()[0]
     print("The most most frequent combination of trips: \n", most_frequent_combined_station)
     
-    print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*40)
+    time_to_finish(start_time)
 
 def trip_duration_stats(df):
     """Displays statistics on the total and average trip duration."""
@@ -195,8 +203,7 @@ def trip_duration_stats(df):
         print('The mean travel time : \n{} hours, {} minutes, and {} seconds.'.format(hour, minute, second))
     else:
         print('The mean travel time : \n{} minutes and {} seconds.'.format(minute, second))
-    print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*40)
+    time_to_finish(start_time)
 
 
 def user_stats(df):
@@ -227,8 +234,7 @@ def user_stats(df):
     except:
         print("Opps! birth year data does not exist in this data files.\n")
 
-    print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*40)
+    time_to_finish(start_time)
 
 
 def display_raw_data(df):
