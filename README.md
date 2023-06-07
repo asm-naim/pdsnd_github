@@ -1,17 +1,22 @@
 ># Programming For Data Science With Python Nanodegree
 
 ### Date created
-Include the date you created this project and README file.
+This project was created on the 7th June 2023
 
 ### Project Title
-Replace the Project Title
+Explore US Bikeshare Data
 
 ### Description
-Describe what your project is about and what it does
+This project was created for the submission of Udacity - Programming For Data Science With Python Nanodegree. 
+The student needs to create an interactive program in the terminal to study the descriptive statistics of bikeshare systems in 3 cities in the Uniterd States which is : 
+    1. Chicago
+    2. New York City
+    3. Washington
 
 ### Files used
-Include the files used
+    1. chicago.csv
+    2. washington.csv 
+    3. new_york_city.csv 
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
-
+https://www.w3schools.com/python/
